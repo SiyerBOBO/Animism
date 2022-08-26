@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MiniView</class>
+ <widget class="QWidget" name="MiniView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>560</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>560</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>560</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>OpcodeView</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QScrollArea {
+	border:none;
+	background:transparent;
+}
+
+QScrollBar:vertical {
+	background:transparent;
+	padding:0px;
+	width:10px;
+}
+
+QScrollBar::handle:vertical{
+	background:rgba(0,0,0,35);
+	border-radius:5px;
+	min-height:30px;
+}
+
+QScrollBar::handle:vertical:hover,QScrollBar::handle:vertical:pressed {
+	background:rgba(0,0,0,75);
+}
+
+QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical {
+	background:none;
+}
+
+QScrollBar::add-line:vertical,QScrollBar::sub-line:vertical {
+	background:none;
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>15</number>
+   </property>
+   <property name="topMargin">
+    <number>15</number>
+   </property>
+   <property name="rightMargin">
+    <number>15</number>
+   </property>
+   <property name="bottomMargin">
+    <number>15</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget_frame" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1,0">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="leftMargin">
+       <number>15</number>
+      </property>
+      <property name="topMargin">
+       <number>15</number>
+      </property>
+      <property name="rightMargin">
+       <number>15</number>
+      </property>
+      <property name="bottomMargin">
+       <number>15</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <property name="spacing">
+         <number>5</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_data_duration">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Microsoft YaHei</family>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel{font-size: 15px;}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_data_copy">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>100</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Microsoft YaHei</family>
+            <pointsize>-1</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{border: none;border-radius: 5px;color: white; font: 13px &quot;Microsoft YaHei&quot;;background-color: #886ab5;}
+QPushButton:!enabled{border: none;border-radius: 5px;color: gray; font: 13px &quot;Microsoft YaHei&quot;;background-color: rgb(237,237,237);}
+QPushButton:hover{border: none;border-radius: 5px;color: white; font: 13px &quot;Microsoft YaHei&quot;;background-color: #967bbd;}
+QPushButton:pressed{border: none;border-radius: 5px;color: white; font: 13px &quot;Microsoft YaHei&quot;;background-color: #7a59ad;}</string>
+          </property>
+          <property name="text">
+           <string>复制到剪贴板</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout" stretch="3,1">
+        <property name="spacing">
+         <number>10</number>
+        </property>
+        <item>
+         <widget class="QTableWidget" name="tableWidget_data">
+          <property name="minimumSize">
+           <size>
+            <width>400</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Microsoft YaHei</family>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#tableWidget_data
+{
+	font-size: 13px;
+    selection-color: white;
+    selection-background-color: #886ab5;
+}</string>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="showGrid">
+           <bool>false</bool>
+          </property>
+          <property name="rowCount">
+           <number>0</number>
+          </property>
+          <property name="columnCount">
+           <number>4</number>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>时间戳</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>事件</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>类型</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>线程</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPlainTextEdit" name="plainTextEdit_param">
+          <property name="minimumSize">
+           <size>
+            <width>400</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Microsoft YaHei</family>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#plainTextEdit_param
+{
+	font-size: 13px;
+	padding: 5px;
+	border: 1px solid rgb(160,160,160);
+	background: transparent;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="textInteractionFlags">
+           <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0,0,0,0">
+        <property name="spacing">
+         <number>5</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_data_count">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Microsoft YaHei</family>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel{font-size: 15px;}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_data_previous">
+          <property name="minimumSize">
+           <size>
+            <width>75</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>75</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Microsoft YaHei</family>
+            <pointsize>-1</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{border: none;border-radius: 5px;color: white; font: 13px &quot;Microsoft YaHei&quot;;background-color: #886ab5;}
+QPushButton:!enabled{border: none;border-radius: 5px;color: gray; font: 13px &quot;Microsoft YaHei&quot;;background-color: rgb(237,237,237);}
+QPushButton:hover{border: none;border-radius: 5px;color: white; font: 13px &quot;Microsoft YaHei&quot;;background-color: #967bbd;}
+QPushButton:pressed{border: none;border-radius: 5px;color: white; font: 13px &quot;Microsoft YaHei&quot;;background-color: #7a59ad;}</string>
+          </property>
+          <property name="text">
+           <string>上一条</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_data_next">
+          <property name="minimumSize">
+           <size>
+            <width>75</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>75</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Microsoft YaHei</family>
+            <pointsize>-1</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{border: none;border-radius: 5px;color: white; font: 13px &quot;Microsoft YaHei&quot;;background-color: #886ab5;}
+QPushButton:!enabled{border: none;border-radius: 5px;color: gray; font: 13px &quot;Microsoft YaHei&quot;;background-color: rgb(237,237,237);}
+QPushButton:hover{border: none;border-radius: 5px;color: white; font: 13px &quot;Microsoft YaHei&quot;;background-color: #967bbd;}
+QPushButton:pressed{border: none;border-radius: 5px;color: white; font: 13px &quot;Microsoft YaHei&quot;;background-color: #7a59ad;}</string>
+          </property>
+          <property name="text">
+           <string>下一条</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_data_top">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>75</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>75</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Microsoft YaHei</family>
+            <pointsize>-1</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{border: none;border-radius: 5px;color: white; font: 13px &quot;Microsoft YaHei&quot;;background-color: #886ab5;}
+QPushButton:!enabled{border: none;border-radius: 5px;color: gray; font: 13px &quot;Microsoft YaHei&quot;;background-color: rgb(237,237,237);}
+QPushButton:hover{border: none;border-radius: 5px;color: white; font: 13px &quot;Microsoft YaHei&quot;;background-color: #967bbd;}
+QPushButton:pressed{border: none;border-radius: 5px;color: white; font: 13px &quot;Microsoft YaHei&quot;;background-color: #7a59ad;}</string>
+          </property>
+          <property name="text">
+           <string>回到顶部</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_data_current">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>75</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>75</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Microsoft YaHei</family>
+            <pointsize>-1</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{border: none;border-radius: 5px;color: white; font: 13px &quot;Microsoft YaHei&quot;;background-color: #886ab5;}
+QPushButton:!enabled{border: none;border-radius: 5px;color: gray; font: 13px &quot;Microsoft YaHei&quot;;background-color: rgb(237,237,237);}
+QPushButton:hover{border: none;border-radius: 5px;color: white; font: 13px &quot;Microsoft YaHei&quot;;background-color: #967bbd;}
+QPushButton:pressed{border: none;border-radius: 5px;color: white; font: 13px &quot;Microsoft YaHei&quot;;background-color: #7a59ad;}</string>
+          </property>
+          <property name="text">
+           <string>定位</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

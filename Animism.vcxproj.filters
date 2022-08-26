@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Ui">
+      <UniqueIdentifier>{44f33eb9-e1d8-45a4-ba65-04cb88c27002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Ui">
+      <UniqueIdentifier>{ca051520-a2ba-4bb3-89b8-7b428876e4a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utils">
+      <UniqueIdentifier>{76b6f8ab-f1f2-4470-b36e-0773a0843a7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{9580cfe2-77a8-42ae-a261-65d9a2a3aee5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{ac2844b1-0ee5-475c-bdd9-8663c9683306}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{669cdd05-d791-47d8-8951-2182c38f08e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine">
+      <UniqueIdentifier>{784ab9fc-1dec-4116-937d-a91a18f5f4dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\testing">
+      <UniqueIdentifier>{eb993872-77e1-4e18-8e6a-e6cb4fb4ae53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\filtering">
+      <UniqueIdentifier>{9788d2a1-9c58-431f-b999-f5357b988d80}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="Animism.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WinButton.cpp">
+      <Filter>Source Files\Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowLayout.cpp">
+      <Filter>Source Files\Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageDialog.cpp">
+      <Filter>Source Files\Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="SwitchButton.cpp">
+      <Filter>Source Files\Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="Animism.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="WinEffectHelper.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="IconButton.cpp">
+      <Filter>Source Files\Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelTask.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="EventTrapper.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="StatusBar.cpp">
+      <Filter>Source Files\Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="Welcome.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Explorer.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessUsageHelper.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessFinder.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="EventTypeDescription.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelView.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectButton.cpp">
+      <Filter>Source Files\Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ValueButton.cpp">
+      <Filter>Source Files\Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelCreater.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelPool.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="SmoothCurveCreator.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="SmoothChart.cpp">
+      <Filter>Source Files\Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgressBar.cpp">
+      <Filter>Source Files\Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveDialog.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Analysis.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="SummaryView.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="LayeredUI.cpp">
+      <Filter>Source Files\Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="DataView.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="NoFocusDelegate.cpp">
+      <Filter>Source Files\Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolTip.cpp">
+      <Filter>Source Files\Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ScatterDiagram.cpp">
+      <Filter>Source Files\Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelReaderV2.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="MiniDurationView.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="MiniOpcodeView.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FlowLayout.h">
+      <Filter>Header Files\Ui</Filter>
+    </ClInclude>
+    <ClInclude Include="WinEffectHelper.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SmoothCurveCreator.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\animism_engine.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\client.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\collection_view.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\compiler_check.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\errors.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\etw.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\guid.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\kernel_guids.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\kernel_providers.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\kt.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\parse_types.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\parser.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\perfinfo_groupmask.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\property.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\provider.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\schema.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\schema_locator.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\size_provider.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\tdh_helpers.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\trace.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\trace_context.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\ut.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\version_helpers.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\filtering\comparers.hpp">
+      <Filter>Header Files\Engine\filtering</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\filtering\event_filter.hpp">
+      <Filter>Header Files\Engine\filtering</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\filtering\predicates.hpp">
+      <Filter>Header Files\Engine\filtering</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\filtering\view_adapters.hpp">
+      <Filter>Header Files\Engine\filtering</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\testing\event_filter_proxy.hpp">
+      <Filter>Header Files\Engine\testing</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\testing\extended_data_builder.hpp">
+      <Filter>Header Files\Engine\testing</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\testing\filler.hpp">
+      <Filter>Header Files\Engine\testing</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\testing\proxy.hpp">
+      <Filter>Header Files\Engine\testing</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\testing\record_builder.hpp">
+      <Filter>Header Files\Engine\testing</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\testing\record_property_thunk.hpp">
+      <Filter>Header Files\Engine\testing</Filter>
+    </ClInclude>
+    <ClInclude Include="animism_engine\testing\synth_record.hpp">
+      <Filter>Header Files\Engine\testing</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="WinButton.h">
+      <Filter>Header Files\Ui</Filter>
+    </QtMoc>
+    <QtMoc Include="MessageDialog.h">
+      <Filter>Header Files\Ui</Filter>
+    </QtMoc>
+    <QtMoc Include="SwitchButton.h">
+      <Filter>Header Files\Ui</Filter>
+    </QtMoc>
+    <QtMoc Include="Animism.h">
+      <Filter>Header Files\Core</Filter>
+    </QtMoc>
+    <QtMoc Include="IconButton.h">
+      <Filter>Header Files\Ui</Filter>
+    </QtMoc>
+    <QtMoc Include="ModelTask.h">
+      <Filter>Header Files\Core</Filter>
+    </QtMoc>
+    <QtMoc Include="StatusBar.h">
+      <Filter>Header Files\Ui</Filter>
+    </QtMoc>
+    <QtMoc Include="EventTrapper.h">
+      <Filter>Header Files\Core</Filter>
+    </QtMoc>
+    <QtMoc Include="Explorer.h">
+      <Filter>Header Files\Core</Filter>
+    </QtMoc>
+    <QtMoc Include="Settings.h">
+      <Filter>Header Files\Core</Filter>
+    </QtMoc>
+    <QtMoc Include="Welcome.h">
+      <Filter>Header Files\Core</Filter>
+    </QtMoc>
+    <QtMoc Include="ProcessUsageHelper.h">
+      <Filter>Header Files\Utils</Filter>
+    </QtMoc>
+    <QtMoc Include="ProcessFinder.h">
+      <Filter>Header Files\Core</Filter>
+    </QtMoc>
+    <QtMoc Include="SelectButton.h">
+      <Filter>Header Files\Ui</Filter>
+    </QtMoc>
+    <QtMoc Include="EventTypeDescription.h">
+      <Filter>Header Files\Core</Filter>
+    </QtMoc>
+    <QtMoc Include="ModelView.h">
+      <Filter>Header Files\Core</Filter>
+    </QtMoc>
+    <QtMoc Include="ValueButton.h">
+      <Filter>Header Files\Ui</Filter>
+    </QtMoc>
+    <QtMoc Include="ModelCreater.h">
+      <Filter>Header Files\Core</Filter>
+    </QtMoc>
+    <QtMoc Include="ModelPool.h">
+      <Filter>Header Files\Core</Filter>
+    </QtMoc>
+    <QtMoc Include="SmoothChart.h">
+      <Filter>Header Files\Ui</Filter>
+    </QtMoc>
+    <QtMoc Include="ProgressBar.h">
+      <Filter>Header Files\Ui</Filter>
+    </QtMoc>
+    <QtMoc Include="SaveDialog.h">
+      <Filter>Header Files\Core</Filter>
+    </QtMoc>
+    <QtMoc Include="Analysis.h">
+      <Filter>Header Files\Core</Filter>
+    </QtMoc>
+    <QtMoc Include="SummaryView.h">
+      <Filter>Header Files\Core</Filter>
+    </QtMoc>
+    <QtMoc Include="LayeredUI.h">
+      <Filter>Header Files\Ui</Filter>
+    </QtMoc>
+    <QtMoc Include="DataView.h">
+      <Filter>Header Files\Core</Filter>
+    </QtMoc>
+    <QtMoc Include="NoFocusDelegate.h">
+      <Filter>Header Files\Ui</Filter>
+    </QtMoc>
+    <QtMoc Include="ToolTip.h">
+      <Filter>Header Files\Ui</Filter>
+    </QtMoc>
+    <QtMoc Include="ScatterDiagram.h">
+      <Filter>Header Files\Ui</Filter>
+    </QtMoc>
+    <QtMoc Include="ModelReaderV2.h">
+      <Filter>Header Files\Core</Filter>
+    </QtMoc>
+    <QtMoc Include="MiniDurationView.h">
+      <Filter>Header Files\Core</Filter>
+    </QtMoc>
+    <QtMoc Include="MiniOpcodeView.h">
+      <Filter>Header Files\Core</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="Animism.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Welcome.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Settings.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Explorer.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ProcessFinder.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ModelView.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="EventTypeDescription.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ModelCreater.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="SaveDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Analysis.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="SummaryView.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="DataView.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ToolTip.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="MiniView.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Animism.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resource\icon.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

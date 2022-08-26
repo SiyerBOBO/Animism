@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5A27D6D5-8144-41CD-AE5C-EF20D9B14C08}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>5.15.2_msvc2019_64</QtInstall>
+    <QtModules>core;sql;network;gui;multimedia;widgets;printsupport;winextras;concurrent;multimediawidgets;charts</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+    <QtHeaderSearchPath>$(QtHeaderSearchPath)</QtHeaderSearchPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>5.15.2_msvc2019_64</QtInstall>
+    <QtModules>core;sql;network;gui;multimedia;widgets;printsupport;winextras;concurrent;multimediawidgets;charts</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+    <QtHeaderSearchPath>$(QtHeaderSearchPath)</QtHeaderSearchPath>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+    <ClCompile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <ExceptionHandling>Async</ExceptionHandling>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Link>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+    <ClCompile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <ExceptionHandling>Async</ExceptionHandling>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Analysis.cpp" />
+    <ClCompile Include="Animism.cpp" />
+    <ClCompile Include="DataView.cpp" />
+    <ClCompile Include="LayeredUI.cpp" />
+    <ClCompile Include="MiniOpcodeView.cpp" />
+    <ClCompile Include="ModelCreater.cpp" />
+    <ClCompile Include="ModelPool.cpp" />
+    <ClCompile Include="ModelReaderV2.cpp" />
+    <ClCompile Include="NoFocusDelegate.cpp" />
+    <ClCompile Include="MiniDurationView.cpp" />
+    <ClCompile Include="ProgressBar.cpp" />
+    <ClCompile Include="SaveDialog.cpp" />
+    <ClCompile Include="ScatterDiagram.cpp" />
+    <ClCompile Include="SmoothCurveCreator.cpp" />
+    <ClCompile Include="SummaryView.cpp" />
+    <ClCompile Include="ToolTip.cpp" />
+    <ClCompile Include="ValueButton.cpp" />
+    <ClCompile Include="EventTrapper.cpp" />
+    <ClCompile Include="EventTypeDescription.cpp" />
+    <ClCompile Include="Explorer.cpp" />
+    <ClCompile Include="Model.cpp" />
+    <ClCompile Include="ModelView.cpp" />
+    <ClCompile Include="ProcessFinder.cpp" />
+    <ClCompile Include="ProcessUsageHelper.cpp" />
+    <ClCompile Include="SelectButton.cpp" />
+    <ClCompile Include="Settings.cpp" />
+    <ClCompile Include="StatusBar.cpp" />
+    <ClCompile Include="ModelTask.cpp" />
+    <ClCompile Include="SmoothChart.cpp" />
+    <ClCompile Include="Welcome.cpp" />
+    <ClCompile Include="WinButton.cpp" />
+    <ClCompile Include="FlowLayout.cpp" />
+    <ClCompile Include="IconButton.cpp" />
+    <ClCompile Include="MessageDialog.cpp" />
+    <ClCompile Include="SwitchButton.cpp" />
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="WinEffectHelper.cpp" />
+    <QtRcc Include="Animism.qrc" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="WinButton.h" />
+    <QtMoc Include="Animism.h" />
+    <QtMoc Include="EventTrapper.h" />
+    <QtMoc Include="Explorer.h" />
+    <QtMoc Include="Analysis.h" />
+    <QtMoc Include="EventTypeDescription.h" />
+    <QtMoc Include="ValueButton.h" />
+    <QtMoc Include="DataView.h" />
+    <ClInclude Include="animism_engine\animism_engine.hpp" />
+    <ClInclude Include="animism_engine\client.hpp" />
+    <ClInclude Include="animism_engine\collection_view.hpp" />
+    <ClInclude Include="animism_engine\compiler_check.hpp" />
+    <ClInclude Include="animism_engine\errors.hpp" />
+    <ClInclude Include="animism_engine\etw.hpp" />
+    <ClInclude Include="animism_engine\filtering\comparers.hpp" />
+    <ClInclude Include="animism_engine\filtering\event_filter.hpp" />
+    <ClInclude Include="animism_engine\filtering\predicates.hpp" />
+    <ClInclude Include="animism_engine\filtering\view_adapters.hpp" />
+    <ClInclude Include="animism_engine\guid.hpp" />
+    <ClInclude Include="animism_engine\kernel_guids.hpp" />
+    <ClInclude Include="animism_engine\kernel_providers.hpp" />
+    <ClInclude Include="animism_engine\kt.hpp" />
+    <ClInclude Include="animism_engine\parser.hpp" />
+    <ClInclude Include="animism_engine\parse_types.hpp" />
+    <ClInclude Include="animism_engine\perfinfo_groupmask.hpp" />
+    <ClInclude Include="animism_engine\property.hpp" />
+    <ClInclude Include="animism_engine\provider.hpp" />
+    <ClInclude Include="animism_engine\schema.hpp" />
+    <ClInclude Include="animism_engine\schema_locator.hpp" />
+    <ClInclude Include="animism_engine\size_provider.hpp" />
+    <ClInclude Include="animism_engine\tdh_helpers.hpp" />
+    <ClInclude Include="animism_engine\testing\event_filter_proxy.hpp" />
+    <ClInclude Include="animism_engine\testing\extended_data_builder.hpp" />
+    <ClInclude Include="animism_engine\testing\filler.hpp" />
+    <ClInclude Include="animism_engine\testing\proxy.hpp" />
+    <ClInclude Include="animism_engine\testing\record_builder.hpp" />
+    <ClInclude Include="animism_engine\testing\record_property_thunk.hpp" />
+    <ClInclude Include="animism_engine\testing\synth_record.hpp" />
+    <ClInclude Include="animism_engine\trace.hpp" />
+    <ClInclude Include="animism_engine\trace_context.hpp" />
+    <ClInclude Include="animism_engine\ut.hpp" />
+    <ClInclude Include="animism_engine\version_helpers.hpp" />
+    <ClInclude Include="FlowLayout.h" />
+    <QtMoc Include="MessageDialog.h" />
+    <QtMoc Include="SwitchButton.h" />
+    <QtMoc Include="IconButton.h" />
+    <QtMoc Include="ModelTask.h" />
+    <QtMoc Include="StatusBar.h" />
+    <QtMoc Include="LayeredUI.h" />
+    <QtMoc Include="MiniOpcodeView.h" />
+    <ClInclude Include="Model.h" />
+    <QtMoc Include="Settings.h" />
+    <QtMoc Include="ProcessUsageHelper.h" />
+    <QtMoc Include="ProcessFinder.h" />
+    <QtMoc Include="ModelView.h" />
+    <QtMoc Include="ModelCreater.h" />
+    <QtMoc Include="ModelPool.h" />
+    <QtMoc Include="ProgressBar.h" />
+    <QtMoc Include="NoFocusDelegate.h" />
+    <QtMoc Include="ModelReaderV2.h" />
+    <QtMoc Include="MiniDurationView.h" />
+    <ClInclude Include="resource.h" />
+    <QtMoc Include="SelectButton.h" />
+    <QtMoc Include="SaveDialog.h" />
+    <QtMoc Include="ScatterDiagram.h" />
+    <ClInclude Include="SmoothCurveCreator.h" />
+    <QtMoc Include="SummaryView.h" />
+    <QtMoc Include="ToolTip.h" />
+    <ClInclude Include="Utils.h" />
+    <QtMoc Include="Welcome.h" />
+    <QtMoc Include="SmoothChart.h" />
+    <ClInclude Include="WinEffectHelper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="Analysis.ui" />
+    <QtUic Include="Animism.ui" />
+    <QtUic Include="DataView.ui" />
+    <QtUic Include="EventTypeDescription.ui" />
+    <QtUic Include="Explorer.ui" />
+    <QtUic Include="ModelCreater.ui" />
+    <QtUic Include="ModelView.ui" />
+    <QtUic Include="MiniView.ui" />
+    <QtUic Include="ProcessFinder.ui" />
+    <QtUic Include="SaveDialog.ui" />
+    <QtUic Include="Settings.ui" />
+    <QtUic Include="SummaryView.ui" />
+    <QtUic Include="ToolTip.ui" />
+    <QtUic Include="Welcome.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Animism.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resource\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\Microsoft.Windows.ImplementationLibrary.1.0.220201.1\build\native\Microsoft.Windows.ImplementationLibrary.targets" Condition="Exists('packages\Microsoft.Windows.ImplementationLibrary.1.0.220201.1\build\native\Microsoft.Windows.ImplementationLibrary.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.Windows.ImplementationLibrary.1.0.220201.1\build\native\Microsoft.Windows.ImplementationLibrary.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Windows.ImplementationLibrary.1.0.220201.1\build\native\Microsoft.Windows.ImplementationLibrary.targets'))" />
+  </Target>
+</Project>

@@ -1,0 +1,45 @@
+<RCC>
+    <qresource prefix="/Animism">
+        <file>Resource/icon_right.png</file>
+        <file>Resource/ani_home.gif</file>
+        <file>Resource/ani_loading.gif</file>
+        <file>Resource/cbx_0.png</file>
+        <file>Resource/cbx_1.png</file>
+        <file>Resource/cbx_downarrow.png</file>
+        <file>Resource/checkbox-checked.png</file>
+        <file>Resource/checkbox-indeterminate.png</file>
+        <file>Resource/checkbox-unchecked.png</file>
+        <file>Resource/dotnet.png</file>
+        <file>Resource/fontawesome-webfont.ttf</file>
+        <file>Resource/icon.ico</file>
+        <file>Resource/icon.png</file>
+        <file>Resource/icon_sys_add.png</file>
+        <file>Resource/nchu.png</file>
+        <file>Resource/nchu_sw.png</file>
+        <file>Resource/qt.png</file>
+        <file>Resource/settings_back.png</file>
+        <file>Resource/app_create.png</file>
+        <file>Resource/app_settings.png</file>
+        <file>Resource/wm_close.png</file>
+        <file>Resource/wm_maxisize.png</file>
+        <file>Resource/wm_minisize.png</file>
+        <file>Resource/wm_return.png</file>
+        <file>Resource/filetype_exe.png</file>
+        <file>Resource/ani_model.gif</file>
+        <file alias="FileIo">Resource/type_fileio.png</file>
+        <file alias="Image">Resource/type_imageload.png</file>
+        <file alias="Process">Resource/type_process.png</file>
+        <file alias="TcpIp">Resource/type_tcpip.png</file>
+        <file alias="Thread">Resource/type_thread.png</file>
+        <file alias="UdpIp">Resource/type_udpip.png</file>
+        <file alias="Registry">Resource/type_registry.png</file>
+        <file>Resource/icon_cpu.png</file>
+        <file>Resource/icon_ram.png</file>
+        <file>Resource/icon_count.png</file>
+        <file>Resource/icon_data.png</file>
+        <file>Resource/icon_proc_aim.png</file>
+        <file>Resource/app_back.png</file>
+        <file>Resource/icon_warning.png</file>
+        <file>Resource/app_open.png</file>
+    </qresource>
+</RCC>
