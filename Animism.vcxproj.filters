@@ -258,6 +258,9 @@
     <ClInclude Include="animism_engine\version_helpers.hpp">
       <Filter>Header Files\Engine</Filter>
     </ClInclude>
+    <ClInclude Include="animism_engine\wstring_convert.hpp">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
     <ClInclude Include="animism_engine\filtering\comparers.hpp">
       <Filter>Header Files\Engine\filtering</Filter>
     </ClInclude>

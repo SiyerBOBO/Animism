@@ -200,6 +200,7 @@
     <ClInclude Include="animism_engine\trace_context.hpp" />
     <ClInclude Include="animism_engine\ut.hpp" />
     <ClInclude Include="animism_engine\version_helpers.hpp" />
+    <ClInclude Include="animism_engine\wstring_convert.hpp" />
     <ClInclude Include="FlowLayout.h" />
     <QtMoc Include="MessageDialog.h" />
     <QtMoc Include="SwitchButton.h" />
